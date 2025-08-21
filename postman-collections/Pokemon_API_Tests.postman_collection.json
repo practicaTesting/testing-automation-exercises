@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "341d6200-1854-446b-9069-202918a76252",
+		"name": "Pokemon_API_Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47296762",
+		"_collection_link": "https://castanomarithza-2256124.postman.co/workspace/Practica-Testing~38ac8f72-e948-4457-b30d-572d69b1f1e2/collection/47296762-341d6200-1854-446b-9069-202918a76252?action=share&source=collection_link&creator=47296762"
+	},
+	"item": [
+		{
+			"name": "Validar que la API responda con código 200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://pokeapi.co/api/v2/pokemon/pikachu",
+					"protocol": "https",
+					"host": [
+						"pokeapi",
+						"co"
+					],
+					"path": [
+						"api",
+						"v2",
+						"pokemon",
+						"pikachu"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Validar estructura del JSON",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response has name and id\", function () {\r",
+							"    const jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.have.property(\"name\");\r",
+							"    pm.expect(jsonData).to.have.property(\"id\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://pokeapi.co/api/v2/pokemon/pikachu",
+					"protocol": "https",
+					"host": [
+						"pokeapi",
+						"co"
+					],
+					"path": [
+						"api",
+						"v2",
+						"pokemon",
+						"pikachu"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Caso de error con endpoint inválido (404)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://pokeapi.co/api/v2/pokemon/xyz123",
+					"protocol": "https",
+					"host": [
+						"pokeapi",
+						"co"
+					],
+					"path": [
+						"api",
+						"v2",
+						"pokemon",
+						"xyz123"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

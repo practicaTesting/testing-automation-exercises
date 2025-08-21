@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-08-21T17:41:13.338Z",
+    "end": "2025-08-21T17:41:26.446Z",
+    "duration": 13108,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8e4cda54-8c55-463a-8cae-34a612c77ef4",
+      "title": "",
+      "fullFile": "cypress\\e2e\\saucedemo.cy.js",
+      "file": "cypress\\e2e\\saucedemo.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8884b382-d597-4f65-bd96-b57b86b5f590",
+          "title": "template spec - conjunto de pruebas",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "login Valido",
+              "fullTitle": "template spec - conjunto de pruebas login Valido",
+              "timedOut": null,
+              "duration": 5278,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.saucedemo.com/');\ncy.get('[data-test=\"username\"]').type(\"standard_user\");\ncy.get('[data-test=\"password\"]').type(\"secret_sauce\");\ncy.get('[data-test=\"login-button\"]').click();\ncy.get('[data-test=\"inventory-container\"]').should(\"be.visible\");\n// Captura de evidencia\ncy.screenshot(\"Login valido\");",
+              "err": {},
+              "uuid": "12edde98-ac80-47f2-9038-787f27b46fa0",
+              "parentUUID": "8884b382-d597-4f65-bd96-b57b86b5f590",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "login Invalido",
+              "fullTitle": "template spec - conjunto de pruebas login Invalido",
+              "timedOut": null,
+              "duration": 1535,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.saucedemo.com/');\ncy.get('[data-test=\"username\"]').type(\"standard_u\");\ncy.get('[data-test=\"password\"]').type(\"secret_sau\");\ncy.get('[data-test=\"login-button\"]').click();\ncy.get('[data-test=\"error\"]').contains(\"Epic sadface: Username and password do not match any user in this service\");\n// Captura de evidencia\ncy.screenshot(\"Login invalido\");",
+              "err": {},
+              "uuid": "c947d702-b65f-4678-8523-4d71ecf08e10",
+              "parentUUID": "8884b382-d597-4f65-bd96-b57b86b5f590",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Agregar productos al carrito",
+              "fullTitle": "template spec - conjunto de pruebas Agregar productos al carrito",
+              "timedOut": null,
+              "duration": 1809,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.saucedemo.com/');\ncy.get('[data-test=\"username\"]').type(\"standard_user\");\ncy.get('[data-test=\"password\"]').type(\"secret_sauce\");\ncy.get('[data-test=\"login-button\"]').click();\ncy.get('[data-test=\"add-to-cart-sauce-labs-backpack\"]').click();\ncy.get('[data-test=\"add-to-cart-sauce-labs-bike-light\"]').click();\ncy.get('[data-test=\"shopping-cart-badge\"]').contains(\"2\");\ncy.get('[data-test=\"shopping-cart-link\"]').click();\ncy.get('[data-test=\"cart-list\"] > :nth-child(3)').should(\"be.visible\");\ncy.get('[data-test=\"item-4-title-link\"] > [data-test=\"inventory-item-name\"]').contains(\"Sauce Labs Backpack\");\ncy.get('[data-test=\"cart-list\"] > :nth-child(4)').should(\"be.visible\");\ncy.get('[data-test=\"item-0-title-link\"] > [data-test=\"inventory-item-name\"]').contains(\"Sauce Labs Bike Light\");\n// Captura de evidencia\ncy.screenshot(\"Productos en el carrito\");",
+              "err": {},
+              "uuid": "c8b26039-e011-48e1-9ca3-4154ba36f4e8",
+              "parentUUID": "8884b382-d597-4f65-bd96-b57b86b5f590",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Proceso de checkout",
+              "fullTitle": "template spec - conjunto de pruebas Proceso de checkout",
+              "timedOut": null,
+              "duration": 2572,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.saucedemo.com/');\ncy.get('[data-test=\"username\"]').type(\"standard_user\");\ncy.get('[data-test=\"password\"]').type(\"secret_sauce\");\ncy.get('[data-test=\"login-button\"]').click();\ncy.get('[data-test=\"add-to-cart-sauce-labs-backpack\"]').click();\ncy.get('[data-test=\"shopping-cart-link\"]').click();\ncy.get('[data-test=\"checkout\"]').click();\ncy.get('[data-test=\"firstName\"]').type(\"Mari\");\ncy.get('[data-test=\"lastName\"]').type(\"Casta\");\ncy.get('[data-test=\"postalCode\"]').type(\"12345\");\ncy.get('[data-test=\"continue\"]').click();\ncy.get('[data-test=\"finish\"]').click();\ncy.get('[data-test=\"complete-header\"]').contains(\"Thank you for your order!\");\n// Captura de evidencia\ncy.screenshot(\"Compra Exitosa\");",
+              "err": {},
+              "uuid": "78862dde-2d10-4811-82ab-3d4ecfb21798",
+              "parentUUID": "8884b382-d597-4f65-bd96-b57b86b5f590",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "12edde98-ac80-47f2-9038-787f27b46fa0",
+            "c947d702-b65f-4678-8523-4d71ecf08e10",
+            "c8b26039-e011-48e1-9ca3-4154ba36f4e8",
+            "78862dde-2d10-4811-82ab-3d4ecfb21798"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11194,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

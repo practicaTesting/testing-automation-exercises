@@ -7,7 +7,7 @@ describe('template spec - conjunto de pruebas', () => {
     cy.get('[data-test="inventory-container"]').should("be.visible")
 
     // Captura de evidencia
-    // cy.screenshot("Login valido");
+    cy.screenshot("Login valido");
   })
 
   it('login Invalido', () => {
@@ -18,7 +18,7 @@ describe('template spec - conjunto de pruebas', () => {
     cy.get('[data-test="error"]').contains("Epic sadface: Username and password do not match any user in this service")
 
     // Captura de evidencia
-    // cy.screenshot("Login invalido");
+    cy.screenshot("Login invalido");
 
   })
 
@@ -40,7 +40,7 @@ describe('template spec - conjunto de pruebas', () => {
     cy.get('[data-test="item-0-title-link"] > [data-test="inventory-item-name"]').contains("Sauce Labs Bike Light")
 
     // Captura de evidencia
-    // cy.screenshot("Productos en el carrito");
+    cy.screenshot("Productos en el carrito");
   })
 
   it('Proceso de checkout', () => {
@@ -61,7 +61,7 @@ describe('template spec - conjunto de pruebas', () => {
     cy.get('[data-test="complete-header"]').contains("Thank you for your order!")
 
     // Captura de evidencia
-    // cy.screenshot("Compra Exitosa");
+    cy.screenshot("Compra Exitosa");
   })
 
 })
