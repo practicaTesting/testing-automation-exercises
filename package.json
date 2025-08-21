@@ -1,0 +1,23 @@
+{
+  "name": "qa-projects-portfolio",
+  "version": "1.0.0",
+  "description": "Este repositorio reúne mis proyectos prácticos de **Testing Manual y Automatizado**, con el objetivo de demostrar mis habilidades y seguir aprendiendo en el área de **Calidad de Software**.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/practicaTesting/testing-automation-exercises.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/practicaTesting/testing-automation-exercises/issues"
+  },
+  "homepage": "https://github.com/practicaTesting/testing-automation-exercises#readme",
+  "devDependencies": {
+    "cypress": "^15.0.0"
+  }
+}
