@@ -32,13 +32,13 @@ jobs:
 
       - name: Upload Cypress screenshots
         if: failure() # solo si hay error
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: cypress-screenshots
           path: cypress/screenshots
 
       - name: Upload Cypress videos
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: cypress-videos
           path: cypress/videos
