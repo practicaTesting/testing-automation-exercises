@@ -16,11 +16,11 @@ Incluye ejemplos de pruebas en aplicaciones web, validación de APIs, reportes d
      - Proceso de checkout.  
    - Reportes y screenshots incluidos.  
 
-_ **(./cypress/e2e)** → Automatización de login, carrito y checkout en SauceDemo.  
+- **(./cypress/e2e)** → Automatización de login, carrito y checkout en SauceDemo.  
 
-_ **(./cypress/screenshots/saucedemo.cy.js)** → Screenshots del RESULTADO ESPERADO de cada prueba login, carrito y checkout en SauceDemo.  
+- **(./cypress/screenshots/saucedemo.cy.js)** → Screenshots del RESULTADO ESPERADO de cada prueba login, carrito y checkout en SauceDemo.  
 
-_ **(./cypress/reports/html/assets/reporte.html)** → Reporte HTML pruebas pasadas y fallidas con Mochawesome.  
+- **(./cypress/reports/html/assets/reporte.html)** → Reporte HTML pruebas pasadas y fallidas con Mochawesome.  
 
 
 2. **Pruebas de API con Postman**  
@@ -31,9 +31,9 @@ _ **(./cypress/reports/html/assets/reporte.html)** → Reporte HTML pruebas pasa
      - Caso de error con endpoint inválido (404).  
    - Reporte en HTML incluido.  
 
-_ **(./src/postman-collections)** → colección en Postman.
+- **(./src/postman-collections)** → colección en Postman.
 
-_ **(./src/postman-collections/reports)** → Reporte HTML con newman y newman-reporter-html
+- **(./src/postman-collections/reports)** → Reporte HTML con newman y newman-reporter-html
 
 
 
@@ -41,16 +41,25 @@ _ **(./src/postman-collections/reports)** → Reporte HTML con newman y newman-r
    - Ejemplo de reporte de bug documentado con pasos de reproducción automáticos.  
    - Caso: **login inválido en SauceDemo**. 
 
-_ **(./bug-reports/)** → Reporte de bug documentado con pasos de reproducción.
+- **(./bug-reports/)** → Reporte de bug documentado con pasos de reproducción.
 
 
 
 4. **Test Cases**  
    - Casos de prueba diseñados para aplicaciones web y APIs.  
 
-_ **(./test-cases/)** → Casos de prueba de la aplicaciones web y APIs.  
+- **(./test-cases/)** → Casos de prueba de la aplicaciones web y APIs.  
 
 
+
+5. **Integración Continua (CI) con GitHub Actions**  
+   - Configuración de un flujo de trabajo que ejecuta las pruebas de Cypress automáticamente en cada **push** o **pull request**.  
+   - Beneficios:  
+     - Detectar errores antes de integrarlos al proyecto.  
+     - Asegurar que el código siempre se valide con pruebas automatizadas.  
+   - Archivo de configuración:  
+
+- **(./.github/workflows/cypress.yml)** → Flujo de trabajo para ejecutar pruebas E2E con Cypress en GitHub Actions.  
 
 ---
 
@@ -61,6 +70,7 @@ _ **(./test-cases/)** → Casos de prueba de la aplicaciones web y APIs.
 - **BrowserStack** → Ejecución de pruebas en múltiples navegadores.  
 - **TestCaseStudio** → Generación de pasos de reproducción de bugs.  
 - **Test & Feedback** → Creación de bugs y reportes en HTML.  
+- **GitHub Actions** → Integración continua para ejecutar pruebas automáticamente.  
 
 ---
 

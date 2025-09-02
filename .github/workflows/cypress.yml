@@ -34,8 +34,4 @@ jobs:
           name: cypress-screenshots
           path: cypress/screenshots
 
-      - name: Upload Cypress videos
-        uses: actions/upload-artifact@v4
-        with:
-          name: cypress-videos
-          path: cypress/videos
+     
