@@ -53,8 +53,8 @@ describe('template spec - conjunto de pruebas', () => {
     cy.get('[data-test="shopping-cart-link"]').click()
     cy.get('[data-test="checkout"]').click()
 
-    cy.get('[data-test="firstName"]').type("Mari")
-    cy.get('[data-test="lastName"]').type("Casta")
+    cy.get('[data-test="firstName"]').type("Marisol")
+    cy.get('[data-test="lastName"]').type("perez")
     cy.get('[data-test="postalCode"]').type("12345")
     cy.get('[data-test="continue"]').click()
     cy.get('[data-test="finish"]').click()
